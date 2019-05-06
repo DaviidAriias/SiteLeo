@@ -1,0 +1,172 @@
+@import 'admin';
+///<reference path="_admin.scss" />
+
+@import 'mixins';
+///<reference path="_mixins.scss" />
+
+/* PC */
+@media (max-width: 91em) {
+    body{
+//        background-color: rgba(255, 0, 0, 0.35);
+    }
+}
+
+/* laptop */
+@media (max-width: 70em) {
+    body{
+//        background-color: rgba(0, 100, 0, 0.46);
+    }
+}
+
+/* Tablet */
+@media (max-width: 64em) {
+    body{
+//        background-color: rgba(139, 69, 19, 0.54);
+    }
+
+    footer{
+        padding: 1% 3%;
+        img{
+            &.vigilado{
+                width: 150px;
+            }
+            &.logo-footer{
+                width: 200px;
+            }
+        }
+    }
+}
+
+/* Phablet */
+@media (max-width: 50em) {
+    body{
+//        background-color: rgba(244, 164, 96, 0.64);
+    }
+    
+    header{
+        height: 70px;
+        img{
+            width: 60%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .container-main{
+        .content{
+            background-position: 80%;
+            background-color: #00000052;
+            background-blend-mode: overlay;
+            height: calc(100vh - 150px);
+            .texts{
+                width: 100%;
+                left: 0;
+                text-align: center;
+                padding: 2% 5%;
+                h1, h2{
+                    text-align: center;
+                    br{
+                        display: none;
+                    }
+                }
+                h1{
+                    font-size: $font-h + 10;
+                }
+                h2{
+                    font-size: $font-h - 9;
+                    margin-left: 0;
+                    max-width: 70%;
+                    min-width: 260px;
+                    padding: 15px;
+                }
+            }
+        }
+    }
+
+    footer{
+        display: inline-block;
+        height: 80px;
+        padding: 20px 2% 2%;
+        .arrow{
+            width: 25px;
+        }
+        img{
+            &.vigilado{
+                &.desktop{
+                    display: none;
+                }
+                &.mobile{
+                    display: inline-block;
+                    width: 45%;
+                    max-width: 150px;
+                }
+            }
+            &.logo-footer{
+                width: 40%;
+                max-width: 150px;
+            }
+            margin: 0 2%;
+        }
+        .col{
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            &:last-of-type{
+                margin-top: 1.5%;
+            }
+        }
+        p{
+            font-size: $font-p - 2;
+            margin-left: 0;
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 45em) {
+    body{
+//        background-color: rgba(255, 127, 166, 0.62);
+    }
+
+}
+
+/* Mobile - Landscape*/
+@media (max-width: 43em) and (orientation: landscape) {
+    body{
+//        background-color: yellowgreen;
+    }
+
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
+    
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2){
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3){
+    
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3){
+    
+}
+

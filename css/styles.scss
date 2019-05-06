@@ -1,0 +1,210 @@
+@import 'admin';
+///<reference path="_admin.scss" />
+
+@import 'mixins';
+///<reference path="_mixins.scss" />
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,500,700);
+
+/*---------------------------------------------------
+
+============ Main - Proyecto ============
+
+* Nombre del proyecto: Agendamiento
+* Nombre del archivo: styles.scss | styles.css
+* Descripción: Hoja de estilos principal agendamiento V1
+* Autor: Movilidad y Canales Banco Davivienda - Cristian Arias - Lady Castillo
+
+---------------------------------------------------*/
+@charset "UTF-8";
+
+/* Main Styles - Generic */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none !important;
+
+    font-family: $roboto;
+    font-weight: normal;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+    &::selection {
+        background: $gris-claro;
+        color: $negro;
+    }
+}
+
+body {
+    max-width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    font-size: 0;
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    &:hover, &:focus {
+        text-decoration: none;
+
+    }
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+//Estilos generales
+body{
+    background-color: #000;
+}
+
+img{
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.container-main{
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    font-size: 0;
+    position: relative;
+    .content{
+        display: inline-block;
+        width: 100%;
+        height: calc(100vh - 160px);
+        
+        background-image: url(../images/image-inversiones-background.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        transition-duration: .2s;
+        .texts{
+            display: inline-block;
+            width: 70%;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            position: absolute;
+
+            text-align: left;
+        }
+        h1, h2{
+            display: inline-block;
+            width: 100%;
+            font-family: $roboto;
+            color: #fff;
+            text-shadow: 1px 1px 2px #444;
+            text-align: left;
+        }
+        h1{
+            font-size: $font-h + 25;
+            strong{
+                font-weight: bold;
+            }
+        }
+        h2{
+            width: auto;
+            padding: 15px 30px;
+            border: 5px solid #fff;
+            margin-top: 5%;
+            font-size: $font-h;
+            text-align: center;
+
+            margin-left: 10%;
+        }
+    }
+}
+
+header{
+    display: inline-block;
+    
+    width: 100%;
+    height: 100px;
+    background-color: $rojo;
+    text-align: center;
+    position: relative;
+    img{
+        width: 100%;
+        max-width: 310px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 10%;
+        margin: auto;
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 60px;
+    padding: 1% 10%;
+    background-color: #000;
+    text-align: center;
+
+    position: relative;
+    .arrow{
+        display: inline-block;
+        width: 35px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: translateY(-20%);
+        margin: auto;
+        z-index: 1;
+    }
+    img{
+        &.vigilado{
+            width: 180px;
+            &.mobile{
+                display: none;
+            }
+        }
+        &.logo-footer{
+            width: 230px;
+        }
+    }
+    p{
+        display: inline-block;
+        width: auto;
+        font-family: $roboto-condensed;
+        font-size: $font-p;
+        color: #fff;
+        font-weight: 100;
+        position: relative;
+        z-index: 9;
+        margin-left: 50px;
+    }
+}
+
+@import 'breakpoints.scss';
